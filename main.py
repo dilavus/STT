@@ -31,7 +31,6 @@ def convert_mpeg():
             continue
 
 
-
 def random_secs_duration():
     num = random.randrange(1, 5 ** 2)
     if num > 20:
@@ -74,7 +73,7 @@ def transcriber(timestamp):
             audio = r.record(source, offset=offset, duration=duration_random)
 
             try:
-                recognize = r.recognize_google(audio, language='uk')
+                recognize = r.recognize_google(audio, language='ru')
                 text = '{} {}'.format(random_secs(offset), recognize)
             except Exception:
                 text = '{} <...>'.format(random_secs(offset))
@@ -85,7 +84,7 @@ def transcriber(timestamp):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     # tcr_time = input("Enter TCR in format(00:00:00:00): ")
-    print(ddhhmmss(5657788))
-    # convert_mpeg()
+    # print(ddhhmmss(5657788))
+    convert_mpeg()
     transcriber('00:00:00:00')
     print('End to transcribe')
