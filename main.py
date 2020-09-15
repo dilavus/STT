@@ -59,8 +59,8 @@ def random_secs(secs):
 def transcriber(timestamp):
     print(timestamp)
     r = sr.Recognizer()
-    harvard = sr.AudioFile('video.wav')
-    f = sf.SoundFile('video.wav')
+    harvard = sr.AudioFile('14.wav')
+    f = sf.SoundFile('14.wav')
     all_time = len(f) / f.samplerate
     offset = 0
 
