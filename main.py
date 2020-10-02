@@ -59,8 +59,8 @@ def random_secs(secs):
 def transcriber(timestamp):
     print(timestamp)
     r = sr.Recognizer()
-    harvard = sr.AudioFile('41.wav')
-    f = sf.SoundFile('41.wav')
+    harvard = sr.AudioFile('42.wav')
+    f = sf.SoundFile('42.wav')
     all_time = len(f) / f.samplerate
     offset = 0
 
@@ -88,3 +88,6 @@ if __name__ == '__main__':
     convert_mpeg()
     transcriber('00:00:00:00')
     print('End to transcribe')
+
+## TODO   1. To make loop for processing .wav files
+## TODO   2. Writing to .txt file
